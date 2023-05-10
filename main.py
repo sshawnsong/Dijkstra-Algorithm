@@ -6,8 +6,6 @@ class Error(Exception):
 def checkInNodes(input):
     if input not in mod1.graph.nodes:
         raise Error()
-    else:
-        pass
 
 while True:
     while True:
