@@ -1,9 +1,16 @@
 import sys
 import heapq
 
-graph = {}
+graph = {
+    'A':{'B': 3, 'C': 1, 'D': 2},
+    'B':{'A': 4, 'D': 3, 'E': 6},
+    'C':{'D': 3, 'E': 2, 'F': 4},
+    'D':{'A': 3, 'E': 5},
+    'E':{'B': 1, 'C': 2, 'D': 5},
+    'F':{'A': 5, 'B': 3}
+         }
 
-def method(start):
+def dijkstra(start):
     distances = {node: sys.maxsize for node in graph}
     distances[start] = 0
     queue = []
