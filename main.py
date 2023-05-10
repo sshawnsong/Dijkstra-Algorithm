@@ -13,8 +13,8 @@ while True:
         finish = input('finish')
 
         try:
-            checkInGraph(start)
-            checkInGraph(finish)
+            checkInNodes(start)
+            checkInNodes(finish)
         except Error:
             print('re-write')
             continue
