@@ -10,16 +10,20 @@ def checkInGraph(input):
         pass
 
 while True:
-    start = input('start')
-    finish = input('finish')
+    while True:
+        start = input('start')
+        finish = input('finish')
 
-    try:
-        checkInGraph(start)
-        checkInGraph(finish)
-    except Error:
-        print('re-write')
-        continue
-    else:
+        try:
+            checkInGraph(start)
+            checkInGraph(finish)
+        except Error:
+            print('re-write')
+            continue
+        else:
+            break
+
+    print(mod1.getDijkstra(start)[finish])
+    end = input('end? (Y/n)')
+    if end == 'Y':
         break
-
-print(mod1.getDijkstra(start)[finish])
